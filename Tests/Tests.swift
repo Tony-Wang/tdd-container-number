@@ -24,6 +24,9 @@ class Tests: XCTestCase {
         assert(ContainerNumber.valid(number: "ZGLU3195510"))
         assert(ContainerNumber.valid(number: "TRHU2898840"))
 
+        //illegal char
+        assert(!ContainerNumber.valid(number: "TRHU2=98840"))
+
         // error
         assert(!ContainerNumber.valid(number: "TRHU2898844"))
 
